@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  color: white;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #010c37;
+}
+.wpm{
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+}
+.text-area{
+  max-width: 30rem;
+  margin: 25px;
+}
+.output{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.input{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.correct{
+  color: #8cff00;
+}
+.incorrect{
+  background-color: red;
+}
+textarea{
+  resize: none;
+  border-radius: 10px;
+  padding: 15px 10px;
+  height: 50px;
+}
