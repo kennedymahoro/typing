@@ -1,6 +1,7 @@
 // main function just for call back purposes
 function Main(){ 
   // input value from textArea
+  /*
   const input:HTMLTextAreaElement = document.querySelector(".input") as HTMLTextAreaElement;
   input.style.visibility = "visible";
   // output to a empty div
@@ -16,19 +17,22 @@ function Main(){
   input.focus();
   // declares the quote needed to use again
   let quote:string;
+  */
   // api url
-  const Random_quote_Api_Url:string = "https://api.quotable.io/random";
+  const Random_quote_Api_Url:string = "https://zenquotes.io/random";
   // the function that fetches the random api and reads it
   async function GetRandomQuote(){
-    return fetch(Random_quote_Api_Url)
+    return fetch("https://zenquotes.io/api/random")
       .then(response => response.json())
-      .then(data => data.content);
+      .then(data => data.q);
   }
+  console.log( GetRandomQuote())
+  /*
   // gets the quote and creates span for every character
   async function getQuote(){
     quote = await GetRandomQuote()
     const arrayQuote = quote.toString().split("")
-    function getElement(e){
+    function getElement(e:string){
       let element = document.createElement("span");
       element.innerHTML = e;
       output.append(element)
@@ -82,6 +86,7 @@ function Main(){
       }, 2000)
     }
   })
+*/
 
 }
 Main()
